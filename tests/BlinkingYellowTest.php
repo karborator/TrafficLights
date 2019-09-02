@@ -5,8 +5,6 @@ namespace TrafficLight\Light;
 
 
 use PHPUnit\Framework\TestCase;
-use TrafficLight\Config;
-use TrafficLight\TrafficLight;
 use TrafficLight\TrafficLightContext;
 
 class BlinkingYellowTest extends TestCase

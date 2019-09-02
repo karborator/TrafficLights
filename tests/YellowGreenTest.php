@@ -1,10 +1,8 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use TrafficLight\Config;
 use TrafficLight\Light\Red;
 use TrafficLight\Light\YellowGreen;
-use TrafficLight\TrafficLight;
 use TrafficLight\TrafficLightContext;
 
 class YellowGreenTest extends TestCase
