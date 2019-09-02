@@ -16,7 +16,7 @@ class TrafficLightTest extends TestCase
 
     public function testGetLightReturnsLightStateInterface()
     {
-        $tl = new TrafficLight('red');
+        $trafficLight = new TrafficLight('red');
 
         $context = $this->getMockBuilder(TrafficLightContext::class)
             ->disableOriginalConstructor()
@@ -28,8 +28,7 @@ class TrafficLightTest extends TestCase
             ->method('getEndTimeDependingOneMode')
             ->willReturn(time() + 30);
 
-        $light = $tl->getLight($context);
+        $light = $trafficLight->getLight($context);
         $this->assertEquals(true, $light instanceof LightStateInterface);
-
     }
 }
