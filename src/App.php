@@ -7,8 +7,9 @@ class App
     /**
      * @param string $lightColor
      * @param ConfigInterface $config
+     * @param bool|null $debug
      */
-    public static function start(string $lightColor, ConfigInterface $config)
+    public static function start(string $lightColor, ConfigInterface $config, bool $debug = null)
     {
         echo sprintf('Starting traffic light app with color %s...', $lightColor) . PHP_EOL;
 
@@ -21,6 +22,10 @@ class App
                 : ($context->isMorningMode() ? $config->get('printSecondsInMorningMode') : 1);
 
             sleep($seconds);
+
+            if ($debug) {
+                break;
+            }
         }
     }
 }
