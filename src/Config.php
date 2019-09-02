@@ -31,11 +31,12 @@ class Config implements ConfigInterface
     }
 
     /**
+     * @param string|null $confDir
      * @return ConfigInterface
      */
-    public static function getInstance(): ConfigInterface
+    public static function getInstance(string $confDir = null): ConfigInterface
     {
-        return self::$instance ?? self::$instance = new static(self::CONFIG_DIR);
+        return self::$instance ?? self::$instance = new static($confDir ?? self::CONFIG_DIR);
     }
 
     /**
