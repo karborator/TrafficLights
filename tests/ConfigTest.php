@@ -12,6 +12,6 @@ class ConfigTest extends TestCase
 
     public function testGet()
     {
-        $this->assertEquals(true, Config::getInstance('./')->get('test'));
+        $this->assertEquals(true, Config::getInstance(__DIR__ . DIRECTORY_SEPARATOR . 'config')->get('test'));
     }
 }
