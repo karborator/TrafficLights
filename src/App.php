@@ -5,7 +5,7 @@ namespace TrafficLight;
 class App
 {
     /**
-     * @param string          $lightColor
+     * @param string $lightColor
      * @param ConfigInterface $config
      */
     public static function start(string $lightColor, ConfigInterface $config)
